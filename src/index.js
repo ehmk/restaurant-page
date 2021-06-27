@@ -1,6 +1,6 @@
 import "./styles/style.css";
-import { home } from "./home.js";
+import { homeContent } from "./home.js";
 
 const content = document.querySelector("#content");
-content.appendChild(home);
+content.appendChild(homeContent.generateHomeDiv());
 
