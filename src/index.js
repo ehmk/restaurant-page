@@ -2,9 +2,20 @@ import "./styles/style.css";
 import { navBar } from "./nav.js";
 import { homeContent } from "./home.js";
 
-const content = document.querySelector("#content");
-content.appendChild(navBar.generateNavBar());
-content.appendChild(homeContent.generateHomeDiv());
+const mainPanel = (() => {
+  const content = document.querySelector("#content");
+  content.appendChild(navBar.generateNavBar());
+  content.appendChild(homeContent.generateHomeDiv());
 
-console.log("1");
+  navBar.homeButton.addEventListener("click", switchPanel);
+  navBar.menuButton.addEventListener("click", switchPanel);
+  navBar.contactButton.addEventListener("click", switchPanel);
+
+  function switchPanel() {
+    console.log("Switching panels. Please wait.");
+  }
+})();
+
+
+
 

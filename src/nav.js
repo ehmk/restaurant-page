@@ -4,21 +4,24 @@ const navBar = (() => {
   const navButtons = document.createElement("ul");
   nav.appendChild(navButtons);
   
-  const homeButton = document.createElement("li");
-  navButtons.appendChild(homeButton);
+  const homeButton = document.createElement("button");
   homeButton.textContent = "Home";
+  navButtons.appendChild(homeButton);
 
-  const menuButton = document.createElement("li");
-  navButtons.appendChild(menuButton);
+  const menuButton = document.createElement("button");
   menuButton.textContent = "Menu";
-
-  const contactButton = document.createElement("li");
-  navButtons.appendChild(contactButton);
+  navButtons.appendChild(menuButton);
+  
+  const contactButton = document.createElement("button");
   contactButton.textContent = "Contact";
+  navButtons.appendChild(contactButton);
   
   return { generateNavBar: function() {
       return nav;
-    } 
+    },
+    homeButton, 
+    menuButton,
+    contactButton,
   }
 })();
 

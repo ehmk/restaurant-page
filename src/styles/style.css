@@ -1,9 +1,25 @@
 body {
-  background-color: black;
-  color: grey;
+  background-color: rgb(15, 15, 15);
+  color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .gallery-image {
   width: 500px;
+}
+
+button {
+  border-style: solid;
+  border-color: rgb(75, 74, 74);
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+button:hover {
+  border-color: white;
+  width: 105px;
 }
