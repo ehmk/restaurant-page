@@ -1,6 +1,6 @@
 import cozyRestaurant from "./images/cozy-restaurant-1.jpg";
 
-const homeContent = (() => {
+const home = (() => {
   const home = document.createElement("div");
 
   const headline = document.createElement("h1");
@@ -23,4 +23,4 @@ const homeContent = (() => {
   } 
 })();
 
-export { homeContent };
+export { home };

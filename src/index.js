@@ -1,18 +1,36 @@
 import "./styles/style.css";
 import { navBar } from "./nav.js";
-import { homeContent } from "./home.js";
+import { home } from "./home.js";
+import { menu } from "./menu.js";
+import { contact } from "./contact";
 
 const mainPanel = (() => {
   const content = document.querySelector("#content");
+  let currentPanel = home.generateHomeDiv();
   content.appendChild(navBar.generateNavBar());
-  content.appendChild(homeContent.generateHomeDiv());
+  content.appendChild(currentPanel);
 
-  navBar.homeButton.addEventListener("click", switchPanel);
-  navBar.menuButton.addEventListener("click", switchPanel);
-  navBar.contactButton.addEventListener("click", switchPanel);
+  navBar.homeButton.addEventListener("click", switchToHome);
+  navBar.menuButton.addEventListener("click", switchToMenu);
+  navBar.contactButton.addEventListener("click", switchToContact);
 
-  function switchPanel() {
-    console.log("Switching panels. Please wait.");
+  function switchToHome() {
+    currentPanel.style.display = "none";
+    currentPanel = home.generateHomeDiv();
+    content.appendChild(currentPanel);
+    currentPanel.style.display = "block";
+  }
+  function switchToMenu() {
+    currentPanel.style.display = "none";
+    currentPanel = menu.generateMenuDiv();
+    content.appendChild(currentPanel);
+    currentPanel.style.display = "block";
+  }
+  function switchToContact() {
+    currentPanel.style.display = "none";
+    currentPanel = contact.generateContactDiv();
+    content.appendChild(currentPanel);
+    currentPanel.style.display = "block";
   }
 })();
 
