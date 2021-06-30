@@ -1,5 +1,6 @@
 const navBar = (() => {
   const nav = document.createElement("nav");
+  nav.classList.add("nav-bar");
   
   const navButtons = document.createElement("ul");
   nav.appendChild(navButtons);

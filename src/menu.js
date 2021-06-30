@@ -22,6 +22,7 @@ const menu = (() => {
   const menu = document.createElement("div");
 
   const header = document.createElement("h1");
+  header.classList.add("header");
   header.textContent = "Menu";
   menu.appendChild(header);
 

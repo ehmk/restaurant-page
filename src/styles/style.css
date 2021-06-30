@@ -4,14 +4,34 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#content {
+  display: grid;
+  margin: auto;
+  width: 75%;
+  padding: 25px;
+  background-color: rgb(10, 10, 10);
+}
+
+.nav-bar {
+  display: grid;
+  margin: auto;
+}
+
 .gallery-image {
   width: 500px;
 }
 
+.header {
+  text-align: center;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
 button {
   border-style: solid;
+  font-size: 14px;
   border-color: rgb(75, 74, 74);
-  background-color: black;
+  background-color: rgb(15, 15, 15);
   color: white;
   padding: 10px;
   margin: 10px;
