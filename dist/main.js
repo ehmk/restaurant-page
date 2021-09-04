@@ -469,7 +469,7 @@ const contact = (() => {
 
   const phoneNumber = document.createElement("p");
   phoneNumber.textContent = "(123)123-1234";
-  contact.apppendChild(phoneNumber);
+  contact.appendChild(phoneNumber);
 
   return { generateContactDiv: function() {return contact}};
 })();
