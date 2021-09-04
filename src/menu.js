@@ -26,9 +26,12 @@ const menu = (() => {
   header.textContent = "Menu";
   menu.appendChild(header);
 
-  const pizza = menuItemFactory("Pizza", "A whole pizza with your choice of toppings.", 14.99);
-  menu.appendChild(pizza);
-
+  for (let i = 0; i < 20; i++) {
+    const food = menuItemFactory("Food", "This is a good item with various ingredients that will please your tastebuds.", 14.99);
+    food.classList.add("menu-item");
+    menu.appendChild(food);
+  }
+  
   return { generateMenuDiv: function() { return menu }};
 })();
 

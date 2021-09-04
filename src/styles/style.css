@@ -27,6 +27,10 @@ body {
   padding-top: 25px;
 }
 
+.menu-item {
+  padding: 15px;
+}
+
 button {
   border-style: solid;
   font-size: 14px;
